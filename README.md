@@ -10,4 +10,3 @@
 
 ## About this project 
 this is Tasks List app built by laravel , the goal of building this app is to apply the basics of laravel like Middleware , controllers , DB, ect.
-

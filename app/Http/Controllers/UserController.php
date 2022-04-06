@@ -94,11 +94,11 @@ class UserController extends Controller
         }
         else {
             $this->message(false, '', 'Email or Password is wrong, please try again');
-            return redirect(url('/login'));
+            return redirect(route('login'));
         }
     }
     public function logOut(){
         auth()->logout();
-        return  redirect(url('/login'));
+        return  redirect(route('login'));
     }
 }

@@ -11,7 +11,7 @@
                         <a class="nav-link" aria-current="page" href={{ url("/User/create") }}>Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href={{ url('/login') }}>Login</a>
+                        <a class="nav-link" aria-current="page" href={{ route('login') }}>Login</a>
                     </li>
                 @else
                     <li class="nav-item">

@@ -21,9 +21,13 @@ Route::get('/', [TaskController::class,'index'])
 
 /* only not logged in users can visit this routes */
 Route::middleware(['notLoggedIn'])->group(function(){
-    Route::resource('User' ,UserController::class)->except( ['edit' , 'update'] );
-    Route::get('/login', [UserController::class,'loginPage']);
-    Route::post('/loginAction', [UserController::class,'loginAction']);
+    Route::resource('User' ,UserController::class, [
+        'names' => [
+            'create' => 'register',
+        ]
+    ])->except( ['edit' , 'update'] );
+    Route::get('/login', [UserController::class,'loginPage'])->name('login');
+    Route::post('/loginAction', [UserController::class,'loginAction'])->name('register');
 });
 
 /* only logged in */
